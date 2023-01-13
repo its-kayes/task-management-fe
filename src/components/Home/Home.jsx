@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
 export default function Home() {
+  const { value } = useSelector((state) => state.check);
+  console.log(value);
   return (
     <div
       onClick={() => toast("Check")}
