@@ -7,6 +7,7 @@ import SideNavbar from "./shared/nav/SideNavbar";
 import Test from "./pages/Test";
 
 const Home = lazy(() => import("./pages/Home"));
+const Calender = lazy(() => import("./pages/Calender"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<SideNavbar />}>
           <Route index element={<Home />} />
+          <Route path="calender" element={<Calender />} />
           <Route path="test" element={<Test />} />
         </Route>
       </Routes>

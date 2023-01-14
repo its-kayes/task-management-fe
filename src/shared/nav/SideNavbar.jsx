@@ -18,6 +18,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import AddTaskIcon from "@mui/icons-material/AddTask";
 import CottageIcon from "@mui/icons-material/Cottage";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { Link, Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -139,6 +140,33 @@ export default function SideNavbar() {
         <Divider />
 
         <List>
+          <Link to="calender">
+            <ListItem key={"Calender"} disablePadding sx={{ display: "block" }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? "initial" : "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <CalendarMonthIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary={"Calender"}
+                  sx={{ opacity: open ? 1 : 0 }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <Divider />
+
           <Link to="test">
             <ListItem key={"Task"} disablePadding sx={{ display: "block" }}>
               <ListItemButton
@@ -161,6 +189,7 @@ export default function SideNavbar() {
               </ListItemButton>
             </ListItem>
           </Link>
+          <Divider />
         </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
