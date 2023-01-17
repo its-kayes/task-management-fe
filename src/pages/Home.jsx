@@ -15,6 +15,11 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Stack, TextareaAutosize, Tooltip } from "@mui/material";
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import DataSaverOnIcon from '@mui/icons-material/DataSaverOn';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import { padding } from "@mui/system";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -93,7 +98,6 @@ export default function Home() {
               <List
                 sx={{
                   width: "100%",
-                  // maxWidth: 360,
                   bgcolor: "background.paper",
                   position: "relative",
                   overflow: "auto",
@@ -133,10 +137,104 @@ export default function Home() {
             </Item>
           </Grid>
           <Grid item xs={6} md={8}>
-            <Item>xs=6 md=8</Item>
+            <Item
+              sx={{
+                width: "full",
+              }}
+            >
+              <Stack
+                sx={{
+                  minWidth: { lg: 420, md: 350, xs: 300 },
+                }}
+                border={1}
+                borderRadius="1px"
+                borderColor="lightgray"
+              >
+                <TextareaAutosize
+                  minRows={8}
+                  variant="standard"
+                  inputProps={{
+                    style: { fontSize: 13 },
+                  }}
+                  InputLabelProps={{
+                    style: { fontSize: 13 },
+                  }}
+                  error="error found"
+                  id="outlined-error-helper-text"
+                  label="Note Area"
+                  helperText="Some important text"
+                />
+              </Stack>
+              <Stack spacing={2} direction="row">
+                <Button
+                  sx={{
+                    width: "100%",
+                    borderRadius: "0px",
+                  }}
+                  variant="outlined"
+                >
+                  Save
+                </Button>
+              </Stack>
+            </Item>
           </Grid>
           <Grid item xs={6} md={4}>
-            <Item>xs=6 md=4</Item>
+            <Item>
+              <Box sx={{ borderLeft: 1, borderRight: 1, borderTop: 1 }}>
+                Note
+              </Box>
+              <Box
+                sx={{
+                  minHeight: 143,
+                  width: "full",
+                  overflow: "auto",
+                  bgcolor: "background.paper",
+                  borderLeft: 1, borderRight: 1, borderTop: 1,
+                  padding: 2,
+                  textAlign: "justify",
+                }}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae numquam itaque error voluptas labore amet quia, qui eaque sit in!
+              </Box>
+              <Stack direction="row">
+                <Tooltip title="Save As Task" arrow>
+                  <Button
+                    sx={{
+                      width: "100%",
+                      borderRadius: "0px",
+                    }}
+                    variant="outlined"
+                  >
+                    <AddTaskIcon />
+                  </Button>
+                </Tooltip>
+                <Tooltip title="Save Note" arrow>
+                  <Button
+                    sx={{
+                      width: "100%",
+                      borderRadius: "0px",
+                    }}
+                    variant="outlined"
+                  >
+                    <DataSaverOnIcon />
+                  </Button>
+                </Tooltip>
+                <Tooltip sx={{
+                  color: "red"
+
+                }} title="Clear Note" arrow>
+                  <Button
+                    sx={{
+                      width: "100%",
+                      borderRadius: "0px",
+                    }}
+                    variant="outlined"
+                  >
+                    <HighlightOffIcon />
+                  </Button>
+                </Tooltip>
+              </Stack>
+            </Item>
           </Grid>
         </Grid>
       </Box>
