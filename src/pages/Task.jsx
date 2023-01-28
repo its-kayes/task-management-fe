@@ -5,6 +5,8 @@ import Grid from '@mui/material/Grid';
 import { Button, Divider, Stack, TextareaAutosize, TextField, Typography } from '@mui/material';
 import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
 import { useRef, useState } from 'react';
+import TaskTimeLine from '../components/Task/TaskTimeLine';
+import Test from './Test';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -194,7 +196,18 @@ export default function Task() {
                         </Item>
                     </Grid>
                     <Grid item xs={6} md={8}>
-                        <Item>xs=6 md=8</Item>
+                        <Item>
+                            <Grid container spacing={2}>
+                                <Grid item xs={6} md={8}>
+                                    <Item> <TaskTimeLine /> </Item>
+                                </Grid>
+                                <Grid item xs={6} md={4}>
+                                    <Item>
+                                        <Test />
+                                    </Item>
+                                </Grid>
+                            </Grid>
+                        </Item>
                     </Grid>
                 </Grid>
             </Box>
