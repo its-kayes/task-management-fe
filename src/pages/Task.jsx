@@ -23,10 +23,24 @@ export default function Task() {
         <Box>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
-                    <Grid item xs={6} md={4}>
+                    <Grid item xs={6} md={3}>
                         <AddTask />
                     </Grid>
-                    <Grid item xs={6} md={8}>
+                    <Grid item xs={6} md={9}>
+                        <Item>
+                            <Grid container spacing={2}>
+                                <Grid item xs={6} md={8}>
+                                    <Item>
+                                        <TaskTimeLine />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={6} md={4}>
+                                    <Item>
+                                        <PreviousListTask />
+                                    </Item>
+                                </Grid>
+                            </Grid>
+                        </Item>
                         <Item>
                             <Grid container spacing={2}>
                                 <Grid item xs={6} md={8}>
@@ -43,8 +57,10 @@ export default function Task() {
                             </Grid>
                         </Item>
                     </Grid>
+
                 </Grid>
             </Box>
+
         </Box >
     )
 }

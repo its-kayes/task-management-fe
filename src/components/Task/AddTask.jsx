@@ -138,7 +138,7 @@ export default function AddTask() {
                             <Grid item xs={6} md={8}>
                                 <Stack
                                     sx={{
-                                        minWidth: { lg: 300, md: 350, xs: 300 },
+                                        minWidth: { lg: 250, md: 350, xs: 300 },
                                     }}
                                     border={1}
                                     borderRadius="2px"

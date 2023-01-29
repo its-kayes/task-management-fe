@@ -18,7 +18,6 @@ export default function TaskTimeLine() {
             <Box
                 value={value}
                 onChange={handleChange}
-                // variant="scrollable"
                 scrollButtons={false}
                 sx={{
                     display: "flex",
@@ -26,13 +25,12 @@ export default function TaskTimeLine() {
                     gap: 1,
                     paddingBottom: 1,
                     width: "100%",
-                    maxWidth: "800px",
+                    maxWidth: "900px",
                     overflowX: "scroll",
                     "&::-webkit-scrollbar": {
                         display: "none",
                     },
                 }}
-            // className="overflow-x-scroll"
             >
                 {/* <Box
                     value={value}
@@ -42,7 +40,7 @@ export default function TaskTimeLine() {
                     aria-label="scrollable prevent tabs example"
                 > */}
 
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((task) => (
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((task) => (
                     <Box sx={{
                         width: "300px",
                         height: "274px",
