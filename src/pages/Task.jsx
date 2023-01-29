@@ -6,6 +6,7 @@ import TaskTimeLine from '../components/Task/TaskTimeLine';
 import Test from './Test';
 import PreviousListTask from '../components/Task/PreviousListTask';
 import AddTask from '../components/Task/AddTask';
+import TaskProgressChart from '../components/Task/TaskProgressChart';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -45,13 +46,12 @@ export default function Task() {
                             <Grid container spacing={2}>
                                 <Grid item xs={6} md={8}>
                                     <Item>
-                                        <TaskTimeLine />
+                                        <TaskProgressChart />
                                     </Item>
                                 </Grid>
                                 <Grid item xs={6} md={4}>
                                     <Item>
                                         <PreviousListTask />
-                                        {/* <Test /> */}
                                     </Item>
                                 </Grid>
                             </Grid>
