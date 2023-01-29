@@ -7,6 +7,7 @@ import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
 import { useRef, useState } from 'react';
 import TaskTimeLine from '../components/Task/TaskTimeLine';
 import Test from './Test';
+import PreviousListTask from '../components/Task/PreviousListTask';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -205,7 +206,8 @@ export default function Task() {
                                 </Grid>
                                 <Grid item xs={6} md={4}>
                                     <Item>
-                                        <Test />
+                                        <PreviousListTask />
+                                        {/* <Test /> */}
                                     </Item>
                                 </Grid>
                             </Grid>
