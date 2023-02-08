@@ -18,8 +18,6 @@ const Item = styled(Paper)(({ theme }) => ({
     marginBottom: '5px',
 }));
 
-
-
 export default function Task() {
 
     return (
@@ -60,18 +58,6 @@ export default function Task() {
                         </Item>
                         <Item>
                             <Quotes />
-                            {/* <Grid container spacing={2}>
-                                <Grid item xs={6} md={8}>
-                                    <Item>
-                                        <TaskProgressChart />
-                                    </Item>
-                                </Grid>
-                                <Grid item xs={6} md={4}>
-                                    <Item>
-                                        <PreviousListTask />
-                                    </Item>
-                                </Grid>
-                            </Grid> */}
                         </Item>
                     </Grid>
 
