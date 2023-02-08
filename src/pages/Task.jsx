@@ -7,6 +7,7 @@ import Test from './Test';
 import PreviousListTask from '../components/Task/PreviousListTask';
 import AddTask from '../components/Task/AddTask';
 import TaskProgressChart from '../components/Task/TaskProgressChart';
+import Quotes from '../components/Task/Quotes';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -14,6 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    marginBottom: '5px',
 }));
 
 
@@ -42,7 +44,7 @@ export default function Task() {
                                 </Grid>
                             </Grid>
                         </Item>
-                        <Item>
+                        <Item >
                             <Grid container spacing={2}>
                                 <Grid item xs={6} md={8}>
                                     <Item>
@@ -55,6 +57,21 @@ export default function Task() {
                                     </Item>
                                 </Grid>
                             </Grid>
+                        </Item>
+                        <Item>
+                            <Quotes />
+                            {/* <Grid container spacing={2}>
+                                <Grid item xs={6} md={8}>
+                                    <Item>
+                                        <TaskProgressChart />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={6} md={4}>
+                                    <Item>
+                                        <PreviousListTask />
+                                    </Item>
+                                </Grid>
+                            </Grid> */}
                         </Item>
                     </Grid>
 
