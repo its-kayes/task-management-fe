@@ -8,6 +8,7 @@ import SideNavbar from "./shared/nav/SideNavbar";
 const Home = lazy(() => import("./pages/Home"));
 const Calender = lazy(() => import("./pages/Calender"));
 const Task = lazy(() => import("./pages/Task"));
+const Login = lazy(() => import("./pages/Login"));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="task" element={<Task />} />
           <Route path="calender" element={<Calender />} />
         </Route>
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Suspense>
   );
